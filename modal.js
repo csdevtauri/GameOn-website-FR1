@@ -48,6 +48,15 @@ function validate() {
   const errormyEmailLabel = document.querySelector('.myEmail.error')
   errormyEmailLabel.style.display = 'none'
 
+  const errormyLocationLabel = document.querySelector('.myLocation.error')
+  errormyLocationLabel.style.display = 'none'
+
+  const errorBirthdateLabel = document.querySelector('.mybirthdate.error')
+  errorBirthdateLabel.style.display = 'none'
+
+  // const errormybirthdateLabel = document.querySelector('.mybirthdate.error')
+  // errormybirthdateLabel.style.display = 'none'
+
   //messages d'erreurs en mode visible
 
   // (1) Le champ Prénom a un minimum de 2 caractères / n'est pas vide.
@@ -68,6 +77,7 @@ function validate() {
     errorLabel.style.display = 'inline'
     formValid = false
   }
+  // debugger
 
   // (3) L'adresse électronique est valide.
   const inputEmail = document.querySelector('#email')
@@ -81,7 +91,7 @@ function validate() {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-
+  // debugger
   // (4) Pour le nombre de concours, une valeur numérique est saisie.
   const inputQuantityNumber = document.querySelector('#quantity')
   const quantityNumber = inputQuantityNumber.value
@@ -91,17 +101,31 @@ function validate() {
   }
 
   // (5) Un bouton radio est sélectionné.
-
+  // debugger
   const checkedRadios = document.querySelectorAll('[name=location]:checked')
+  // const checkedRadios = checkedRadios.value
   if (checkedRadios.length < 1) {
+    const errorLabel = document.querySelector('.myLocation.error')
+    errorLabel.style.display = 'inline'
+    formValid = false
+  }
+  // debugger
+  // (/) Vous devez entrer votre date de naissance.
+  debugger
+  const inputBirthdate = document.querySelector('#birthdate')
+  const birthdate = inputBirthdate.value
+  if (birthdate.length < 1) {
+    const errorLabel = document.querySelector('.mybirthdate.error')
+    errorLabel.style.display = 'inline'
+    // debugger
     formValid = false
   }
 
-  // if (formValid === true) {
-  //   //cacher la modal du formular
-  //   //montrer la modal success
-  // }
-
+  //   // if (formValid === true) {
+  //     //cacher la modal du formular
+  //     //montrer la modal success
+  //   // }
+  // debugger
   return formValid
 }
 

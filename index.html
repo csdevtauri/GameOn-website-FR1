@@ -55,13 +55,7 @@
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
-            <form
-              name="reserve"
-              action="index.html"
-              method="get"
-              onsubmit="return validate();"
-              noValidate
-            >
+            <form name="reserve" onsubmit="return validate();" novalidate>
               <div class="formData">
                 <label for="first">Prénom</label>
                 <br />
@@ -72,7 +66,10 @@
                   name="first"
                   placeholder="ex:Pierre"
                 />
-                <span class="firstName error">* Veuillez entrer 2 caractères ou plus pour le champ du prénom.</span>
+                <span class="firstName error">
+                  * Veuillez entrer 2 caractères ou plus pour le champ du
+                  prénom.
+                </span>
                 <br />
               </div>
               <div class="formData">
@@ -85,7 +82,9 @@
                   name="last"
                   placeholder="ex: Dupont"
                 />
-                <span class="lastName error">* Veuillez entrer 2 caractères ou plus pour le champ du nom.</span>
+                <span class="lastName error">
+                  * Veuillez entrer 2 caractères ou plus pour le champ du nom.
+                </span>
                 <br />
               </div>
               <div class="formData">
@@ -98,7 +97,9 @@
                   name="email"
                   placeholder="ex: pierre.dupont@yahoo.com"
                 />
-                <span class="myEmail error">* Veuillez entrer une adresse email valide.</span>
+                <span class="myEmail error">
+                  * Veuillez entrer une adresse email valide.
+                </span>
                 <br />
               </div>
               <div class="formData">
@@ -110,6 +111,10 @@
                   id="birthdate"
                   name="birthdate"
                 />
+                <br />
+                <span class="mybirthdate error">
+                  * Vous devez entrer votre date de naissance.
+                </span>
                 <br />
               </div>
               <div class="formData">
@@ -192,6 +197,10 @@
                   <span class="checkbox-icon"></span>
                   Portland
                 </label>
+                <br />
+                <span class="myLocation error">
+                  * Vous devez entrer une ville malgré tout.
+                </span>
               </div>
 
               <div class="formData">
