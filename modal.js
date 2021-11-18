@@ -48,6 +48,11 @@ function validate() {
   const errormyEmailLabel = document.querySelector('.myEmail.error')
   errormyEmailLabel.style.display = 'none'
 
+  const errormyQuantityTournamentLabel = document.querySelector(
+    '.myQuantityTournament.error',
+  )
+  errormyQuantityTournamentLabel.style.display = 'none'
+
   const errormyLocationLabel = document.querySelector('.myLocation.error')
   errormyLocationLabel.style.display = 'none'
 
@@ -96,7 +101,14 @@ function validate() {
   const inputQuantityNumber = document.querySelector('#quantity')
   const quantityNumber = inputQuantityNumber.value
 
-  if (inputQuantityNumber.value < 0 || inputQuantityNumber.value > 99) {
+  // debugger
+  if (
+    inputQuantityNumber.value < 0 ||
+    inputQuantityNumber.value > 99 == false
+  ) {
+    const errorLabel = document.querySelector('.myQuantityTournament.error')
+    errorLabel.style.display = 'inline'
+
     formValid = false
   }
 
@@ -111,7 +123,7 @@ function validate() {
   }
   // debugger
   // (/) Vous devez entrer votre date de naissance.
-  debugger
+  // debugger
   const inputBirthdate = document.querySelector('#birthdate')
   const birthdate = inputBirthdate.value
   if (birthdate.length < 1) {
