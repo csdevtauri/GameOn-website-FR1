@@ -98,14 +98,12 @@ function validate() {
   }
   // debugger
   // (4) Pour le nombre de concours, une valeur numérique est saisie.
-  const inputQuantityNumber = document.querySelector('#quantity')
-  const quantityNumber = inputQuantityNumber.value
-
+  // const nbTournois = inputQuantityNumber.value
   // debugger
-  if (
-    inputQuantityNumber.value < 0 ||
-    inputQuantityNumber.value > 99 == false
-  ) {
+
+  const inputQuantityNumber = document.querySelector('#quantity')
+  const nbTournois = parseInt(inputQuantityNumber.value, 10)
+  if (nbTournois.value < 0 || nbTournois.value > 99 == false) {
     const errorLabel = document.querySelector('.myQuantityTournament.error')
     errorLabel.style.display = 'inline'
 
