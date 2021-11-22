@@ -48,11 +48,6 @@ function validate() {
   const errormyEmailLabel = document.querySelector('.myEmail.error')
   errormyEmailLabel.style.display = 'none'
 
-  const errormyQuantityTournamentLabel = document.querySelector(
-    '.myQuantityTournament.error',
-  )
-  errormyQuantityTournamentLabel.style.display = 'none'
-
   const errormyLocationLabel = document.querySelector('.myLocation.error')
   errormyLocationLabel.style.display = 'none'
 
@@ -101,17 +96,30 @@ function validate() {
   // const nbTournois = inputQuantityNumber.value
   // debugger
 
+  // const inputQuantityNumber = document.querySelector('#quantity')
+  // const nbTournois = parseInt(inputQuantityNumber.value, 10)
+  // if (nbTournois < 0 || nbTournois > 99) {
+  //   const errorLabel = document.querySelector('.myQuantityTournament.error')
+  //   errorLabel.style.display = 'inline'
+
+  //   formValid = false
+  // }
+// debugger
   const inputQuantityNumber = document.querySelector('#quantity')
   const nbTournois = parseInt(inputQuantityNumber.value, 10)
-  if (nbTournois.value < 0 || nbTournois.value > 99 == false) {
+  if (nbTournois < 1 || nbTournois > 99) {
     const errorLabel = document.querySelector('.myQuantityTournament.error')
     errorLabel.style.display = 'inline'
+    const errormyQuantityTournamentLabel = document.querySelector(
+      '.myQuantityTournament.error',
+    )
+    errormyQuantityTournamentLabel.style.display = 'none'
 
     formValid = false
   }
 
   // (5) Un bouton radio est sélectionné.
-  // debugger
+  
   const checkedRadios = document.querySelectorAll('[name=location]:checked')
   // const checkedRadios = checkedRadios.value
   if (checkedRadios.length < 1) {
