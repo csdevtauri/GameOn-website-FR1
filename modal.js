@@ -77,7 +77,6 @@ function validate() {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-  // debugger
 
   // (3) L'adresse électronique est valide.
   const inputEmail = document.querySelector('#email')
@@ -91,27 +90,16 @@ function validate() {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-  // debugger
-  // (4) Pour le nombre de concours, une valeur numérique est saisie.
-  // const nbTournois = inputQuantityNumber.value
-  // debugger
 
-  // const inputQuantityNumber = document.querySelector('#quantity')
-  // const nbTournois = parseInt(inputQuantityNumber.value, 10)
-  // if (nbTournois < 0 || nbTournois > 99) {
-  //   const errorLabel = document.querySelector('.myQuantityTournament.error')
-  //   errorLabel.style.display = 'inline'
+  // (4) Pour le nombre de concours, une valeur numérique est saisie
 
-  //   formValid = false
-  // }
-// debugger
   const inputQuantityNumber = document.querySelector('#quantity')
   const nbTournois = parseInt(inputQuantityNumber.value, 10)
-  if (nbTournois < 1 || nbTournois > 99) {
+  if (isNaN(nbTournois) || nbTournois < 0 || nbTournois > 99) {
     const errorLabel = document.querySelector('.myQuantityTournament.error')
     errorLabel.style.display = 'inline'
     const errormyQuantityTournamentLabel = document.querySelector(
-      '.myQuantityTournament.error',
+      'myQuantityTournament.error',
     )
     errormyQuantityTournamentLabel.style.display = 'none'
 
@@ -119,7 +107,7 @@ function validate() {
   }
 
   // (5) Un bouton radio est sélectionné.
-  
+
   const checkedRadios = document.querySelectorAll('[name=location]:checked')
   // const checkedRadios = checkedRadios.value
   if (checkedRadios.length < 1) {
@@ -127,15 +115,15 @@ function validate() {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-  // debugger
+
   // (/) Vous devez entrer votre date de naissance.
-  // debugger
+
   const inputBirthdate = document.querySelector('#birthdate')
   const birthdate = inputBirthdate.value
   if (birthdate.length < 1) {
     const errorLabel = document.querySelector('.mybirthdate.error')
     errorLabel.style.display = 'inline'
-    // debugger
+
     formValid = false
   }
 
@@ -143,7 +131,7 @@ function validate() {
   //     //cacher la modal du formular
   //     //montrer la modal success
   //   // }
-  // debugger
+
   return formValid
 }
 
