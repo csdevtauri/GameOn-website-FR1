@@ -118,7 +118,6 @@ function validate(event) {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-debugger
   // (/) Vous devez entrer votre date de naissance.
   // debugger
   const inputBirthdate = document.querySelector('#birthdate')
