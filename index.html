@@ -54,7 +54,14 @@
       <div class="bground">
         <div class="content">
           <span class="close"></span>
-          <div class="modal-body">
+          <div class="modal-body modal-confirm">
+            Merci pour votre inscription!
+            <form name="reserve" onsubmit="return validate();" novalidate>
+              <input class="btn-submit" type="submit" value="Close" />
+            </form>
+          </div>
+
+          <div class="modal-body modal-form">
             <form name="reserve" onsubmit="return validate();" novalidate>
               <div class="formData">
                 <label for="first">Prénom</label>
@@ -226,28 +233,24 @@
                 </label>
                 <br />
               </div>
+
               <input class="btn-submit" type="submit" value="C'est parti" />
             </form>
           </div>
         </div>
       </div>
 
-      <div class="success">
+      <!-- <div class="success">
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
-            Thank you for 
-            submitting your 
-            registration details
+            Merci pour votre inscription
             <form name="reserve" onsubmit="return validate();" novalidate>
               <input class="btn-submit" type="submit" value="Close" />
             </form>
           </div>
         </div>
-      </div>
-
-
-
+      </div> -->
     </main>
     <footer>
       <p class="copyrights">Copyright 2014 - 2020, GameOn Inc.</p>

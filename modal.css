@@ -183,11 +183,9 @@ main {
   width: 100%;
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
-  .hide{
-    
+  .hide {
   }
 }
-
 
 .content {
   margin: 5% auto;
@@ -206,6 +204,10 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+}
+
+.modal-confirm {
+  display: none;
 }
 
 label {
@@ -555,5 +557,3 @@ footer {
     opacity: 1;
   }
 }
-
-

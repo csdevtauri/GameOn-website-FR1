@@ -24,6 +24,7 @@ function launchModal() {
 // #1 TODO : close modal
 
 // Close modal event
+
 modalClose.forEach((close) => close.addEventListener('click', closeModal))
 
 // close modal form
@@ -33,7 +34,9 @@ function closeModal() {
 
 // #2 Implement form entries and all error message.
 //Firstname --> Lastname --> Email --> Numbers tournaments
-function validate() {
+
+function validate(event) {
+  event.preventDefault()
   // Les compteurs sont mis à zero dès le début.
   let formValid = true
 
@@ -98,10 +101,10 @@ function validate() {
   if (isNaN(nbTournois) || nbTournois < 0 || nbTournois > 99) {
     const errorLabel = document.querySelector('.myQuantityTournament.error')
     errorLabel.style.display = 'inline'
-    const errormyQuantityTournamentLabel = document.querySelector(
-      'myQuantityTournament.error',
-    )
-    errormyQuantityTournamentLabel.style.display = 'none'
+    // const errormyQuantityTournamentLabel = document.querySelector(
+    //   'myQuantityTournament.error',
+    // )
+    // errormyQuantityTournamentLabel.style.display = 'none'
 
     formValid = false
   }
@@ -115,9 +118,9 @@ function validate() {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-
+debugger
   // (/) Vous devez entrer votre date de naissance.
-
+  // debugger
   const inputBirthdate = document.querySelector('#birthdate')
   const birthdate = inputBirthdate.value
   if (birthdate.length < 1) {
@@ -131,6 +134,15 @@ function validate() {
   //     //cacher la modal du formular
   //     //montrer la modal success
   //   // }
+  if (formValid) {
+    const modalBodyForm = document.querySelector('.modal-body .modal-form')
+    const modalBodyConfirm = document.querySelector(
+      '.modal-body .modal-confirm',
+    )
+    modalBodyForm.style.display = 'none'
+    modalBodyConfirm.style.display = 'none'
+  }
+
 
   return formValid
 }
