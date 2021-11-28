@@ -525,8 +525,15 @@ footer {
   .hero-content .btn-signup {
     display: none;
   }
-  .hero-headline {
+
+/* modif */
+  /* .hero-headline {
     font-size: 4.5rem;
+    white-space: normal;
+  } */
+
+  .hero-headline {
+    font-size: 3rem;
     white-space: normal;
   }
   .hero-text {
