@@ -35,7 +35,7 @@ function closeModal() {
 // #2 Implement form entries and all error message.
 //Firstname --> Lastname --> Email --> Numbers tournaments
 
-function validate(event) {
+function validate (event) {
   event.preventDefault()
   // Les compteurs sont mis à zero dès le début.
   let formValid = true
@@ -134,9 +134,9 @@ function validate(event) {
   //     //montrer la modal success
   //   // }
   if (formValid) {
-    const modalBodyForm = document.querySelector('.modal-body .modal-form')
+    const modalBodyForm = document.querySelector('.modal-body.modal-form')
     const modalBodyConfirm = document.querySelector(
-      '.modal-body .modal-confirm',
+      '.modal-body.modal-confirm',
     )
     modalBodyForm.style.display = 'none'
     modalBodyConfirm.style.display = 'none'

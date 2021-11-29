@@ -56,13 +56,21 @@
           <span class="close"></span>
           <div class="modal-body modal-confirm">
             Merci pour votre inscription!
-            <form name="reserve" onsubmit="return validate();" novalidate>
+            <form
+              name="reserve"
+              onsubmit="event => validate(event);"
+              novalidate
+            >
               <input class="btn-submit" type="submit" value="Close" />
             </form>
           </div>
 
           <div class="modal-body modal-form">
-            <form name="reserve" onsubmit="return validate();" novalidate>
+            <form
+              name="reserve"
+              onsubmit="event => validate(event);"
+              novalidate
+            >
               <div class="formData">
                 <label for="first">Prénom</label>
                 <br />
@@ -245,7 +253,7 @@
           <span class="close"></span>
           <div class="modal-body">
             Merci pour votre inscription
-            <form name="reserve" onsubmit="return validate();" novalidate>
+            <form name="reserve" onsubmit="event =>  validate(event);" novalidate>
               <input class="btn-submit" type="submit" value="Close" />
             </form>
           </div>
