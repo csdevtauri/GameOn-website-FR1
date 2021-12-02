@@ -172,8 +172,7 @@ main {
   width: 100%;
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
-  .hide {
-  }
+  
 }
 
 .content {
@@ -193,6 +192,11 @@ main {
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+  min-height: 739px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
 .modal-confirm {
@@ -627,6 +631,7 @@ footer {
   p.hero-text {
     font-weight: 400;
     font-size: 13px;
+    padding-right: 105px;
   }
   /* .modal-body {
     position: absolute;

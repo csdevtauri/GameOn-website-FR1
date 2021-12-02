@@ -14,6 +14,9 @@ const formData = document.querySelectorAll('.formData')
 //*close modal*//
 const modalClose = document.querySelectorAll('span.close')
 
+const modalForm = document.querySelector('.modal-inscription-form')
+modalForm.addEventListener('submit', (event) => validate(event))
+
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener('click', launchModal))
 
@@ -35,7 +38,9 @@ function closeModal() {
 // #2 Implement form entries and all error message.
 //Firstname --> Lastname --> Email --> Numbers tournaments
 
-function validate (event) {
+function validate(event) {
+  // debugger
+  // preventDefaut permet d'enlever le comportement par défaut de la proprieté event submit qui est sensé aller sur la page index.html
   event.preventDefault()
   // Les compteurs sont mis à zero dès le début.
   let formValid = true
@@ -135,13 +140,10 @@ function validate (event) {
   //   // }
   if (formValid) {
     const modalBodyForm = document.querySelector('.modal-body.modal-form')
-    const modalBodyConfirm = document.querySelector(
-      '.modal-body.modal-confirm',
-    )
+    const modalBodyConfirm = document.querySelector('.modal-body.modal-confirm')
     modalBodyForm.style.display = 'none'
     modalBodyConfirm.style.display = 'none'
   }
-
 
   return formValid
 }

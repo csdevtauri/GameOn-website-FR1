@@ -56,21 +56,12 @@
           <span class="close"></span>
           <div class="modal-body modal-confirm">
             Merci pour votre inscription!
-            <form
-              name="reserve"
-              onsubmit="event => validate(event);"
-              novalidate
-            >
-              <input class="btn-submit" type="submit" value="Close" />
-            </form>
+
+            <input class="btn-submit" type="submit" value="Close" />
           </div>
 
           <div class="modal-body modal-form">
-            <form
-              name="reserve"
-              onsubmit="event => validate(event);"
-              novalidate
-            >
+            <form name="reserve" class="modal-inscription-form" novalidate>
               <div class="formData">
                 <label for="first">Prénom</label>
                 <br />
@@ -248,17 +239,21 @@
         </div>
       </div>
 
-      <div class="success">
+      <!-- <div class="success">
         <div class="content">
           <span class="close"></span>
           <div class="modal-body">
             Merci pour votre inscription
-            <form name="reserve" onsubmit="event =>  validate(event);" novalidate>
+            <form
+              name="reserve"
+              onsubmit="event =>  validate(event);"
+              novalidate
+            >
               <input class="btn-submit" type="submit" value="Close" />
             </form>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
     <footer>
       <p class="copyrights">Copyright 2014 - 2020, GameOn Inc.</p>
