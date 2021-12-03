@@ -105,6 +105,7 @@ main {
   padding-right: 2vw;
   margin: 1px 20px 15px;
   border-radius: 2rem;
+
   text-align: justify;
 }
 
@@ -172,7 +173,6 @@ main {
   width: 100%;
   overflow: auto;
   background-color: rgba(26, 39, 156, 0.4);
-  
 }
 
 .content {
@@ -189,19 +189,23 @@ main {
   padding-top: 10px;
 }
 
+/* modif */
 .modal-body {
-  padding: 15px 8%;
+  padding: 15px 50px;
   margin: 15px auto;
-  min-height: 739px;
+  min-height: 740px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
-.modal-confirm {
+.modal-body.modal-confirm {
   display: none;
 }
+
+/* .modal-body.modal-form {
+  display: none;
+} */
 
 label {
   font-family: var(--font-default);
@@ -633,6 +637,17 @@ footer {
     font-size: 13px;
     padding-right: 105px;
   }
+
+  /* ajouts
+.modal-body{
+  padding: 15px 180px;
+
+}
+.modal-body.modal-confirm > span{
+  margin-top: 280px;
+
+} */
+
   /* .modal-body {
     position: absolute;
     left: 0%;

@@ -106,10 +106,7 @@ function validate(event) {
   if (isNaN(nbTournois) || nbTournois < 0 || nbTournois > 99) {
     const errorLabel = document.querySelector('.myQuantityTournament.error')
     errorLabel.style.display = 'inline'
-    // const errormyQuantityTournamentLabel = document.querySelector(
-    //   'myQuantityTournament.error',
-    // )
-    // errormyQuantityTournamentLabel.style.display = 'none'
+  
 
     formValid = false
   }
@@ -134,15 +131,14 @@ function validate(event) {
     formValid = false
   }
 
-  //   // if (formValid === true) {
-  //     //cacher la modal du formular
-  //     //montrer la modal success
-  //   // }
+
+
+  // debugger
   if (formValid) {
     const modalBodyForm = document.querySelector('.modal-body.modal-form')
-    const modalBodyConfirm = document.querySelector('.modal-body.modal-confirm')
+    // const modalBodyConfirm = document.querySelector('.modal-body.modal-confirm')
     modalBodyForm.style.display = 'none'
-    modalBodyConfirm.style.display = 'none'
+    // modalBodyConfirm.style.display = 'none'
   }
 
   return formValid
