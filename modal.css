@@ -199,9 +199,9 @@ main {
   justify-content: space-between;
 }
 
-/* .modal-body.modal-confirm {
+.modal-body.modal-confirm {
   display: none;
-} */
+}
 
 /* .modal-body.modal-form {
   display: none;

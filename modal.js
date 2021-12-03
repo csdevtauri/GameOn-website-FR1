@@ -132,10 +132,10 @@ function validate(event) {
     formValid = false
   }
 
-  // debugger
+  debugger
   if (formValid) {
-    const modalBodyForm = document.querySelector('modal-body modal-form')
-    const modalBodyConfirm = document.querySelector('modal-body modal-confirm')
+    const modalBodyForm = document.querySelector('.bground.modal-form')
+    const modalBodyConfirm = document.querySelector('.bground.modal-confirm')
     modalBodyForm.style.display = 'none'
     modalBodyConfirm.style.display = 'none'
   }
