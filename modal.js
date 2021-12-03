@@ -27,7 +27,7 @@ function launchModal() {
 // #1 TODO : close modal
 
 // Close modal event
-
+// debugger
 modalClose.forEach((close) => close.addEventListener('click', closeModal))
 
 // close modal form
@@ -39,7 +39,7 @@ function closeModal() {
 //Firstname --> Lastname --> Email --> Numbers tournaments
 
 function validate(event) {
-  // debugger
+  
   // preventDefaut permet d'enlever le comportement par défaut de la proprieté event submit qui est sensé aller sur la page index.html
   event.preventDefault()
   // Les compteurs sont mis à zero dès le début.
@@ -115,7 +115,6 @@ function validate(event) {
   // (5) Un bouton radio est sélectionné.
 
   const checkedRadios = document.querySelectorAll('[name=location]:checked')
-  // const checkedRadios = checkedRadios.value
   if (checkedRadios.length < 1) {
     const errorLabel = document.querySelector('.myLocation.error')
     errorLabel.style.display = 'inline'
@@ -132,12 +131,12 @@ function validate(event) {
     formValid = false
   }
 
-  debugger
+  // debugger
   if (formValid) {
     const modalBodyForm = document.querySelector('.bground.modal-form')
     const modalBodyConfirm = document.querySelector('.bground.modal-confirm')
     modalBodyForm.style.display = 'none'
-    modalBodyConfirm.style.display = 'none'
+    modalBodyConfirm.style.display = 'block'
   }
 
   return formValid
