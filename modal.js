@@ -62,8 +62,10 @@ function validate(event) {
   const errorBirthdateLabel = document.querySelector('.mybirthdate.error')
   errorBirthdateLabel.style.display = 'none'
 
-  // const errormybirthdateLabel = document.querySelector('.mybirthdate.error')
-  // errormybirthdateLabel.style.display = 'none'
+  const errorQuantityTournamentLabel = document.querySelector('.myQuantityTournament.error')
+  errorQuantityTournamentLabel.style.display = 'none'
+
+
 
   //messages d'erreurs en mode visible
 
@@ -106,7 +108,6 @@ function validate(event) {
   if (isNaN(nbTournois) || nbTournois < 0 || nbTournois > 99) {
     const errorLabel = document.querySelector('.myQuantityTournament.error')
     errorLabel.style.display = 'inline'
-  
 
     formValid = false
   }
@@ -131,14 +132,12 @@ function validate(event) {
     formValid = false
   }
 
-
-
   // debugger
   if (formValid) {
-    const modalBodyForm = document.querySelector('.modal-body.modal-form')
-    // const modalBodyConfirm = document.querySelector('.modal-body.modal-confirm')
+    const modalBodyForm = document.querySelector('modal-body modal-form')
+    const modalBodyConfirm = document.querySelector('modal-body modal-confirm')
     modalBodyForm.style.display = 'none'
-    // modalBodyConfirm.style.display = 'none'
+    modalBodyConfirm.style.display = 'none'
   }
 
   return formValid
