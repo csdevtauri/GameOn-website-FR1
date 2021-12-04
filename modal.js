@@ -9,13 +9,18 @@ function editNav() {
 
 /// DOM Elements
 const modalbg = document.querySelector('.bground')
+// const modalbgSuccess = document.querySelector('modal-confirm')
 const modalBtn = document.querySelectorAll('.modal-btn')
 const formData = document.querySelectorAll('.formData')
 //*close modal*//
-const modalClose = document.querySelectorAll('span.close')
+const modalClose1 = document.querySelectorAll('span.close')
+const modalClose2 = document.querySelectorAll('button.btn-close')
 
 const modalForm = document.querySelector('.modal-inscription-form')
 modalForm.addEventListener('submit', (event) => validate(event))
+
+// const modalSuccess = document.querySelector('.modal-success')
+// modalSuccess.addEventListener('submit', (event) => validate(event))
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener('click', launchModal))
@@ -25,15 +30,25 @@ function launchModal() {
   modalbg.style.display = 'block'
 }
 // #1 TODO : close modal
-
 // Close modal event
 // debugger
-modalClose.forEach((close) => close.addEventListener('click', closeModal))
+modalClose1.forEach((close) => close.addEventListener('click', closeModal))
+modalClose2.forEach((close) => close.addEventListener('click', closeModal))
+
 
 // close modal form
+// debugger
 function closeModal() {
   modalbg.style.display = 'none'
+  debugger
+  // modalClose.style.display ='none'
+
 }
+
+// function closeModal() {
+  
+// }
+
 
 // #2 Implement form entries and all error message.
 //Firstname --> Lastname --> Email --> Numbers tournaments
@@ -136,8 +151,17 @@ function validate(event) {
     const modalBodyForm = document.querySelector('.bground.modal-form')
     const modalBodyConfirm = document.querySelector('.bground.modal-confirm')
     modalBodyForm.style.display = 'none'
+    debugger
     modalBodyConfirm.style.display = 'block'
+
   }
+
+
+
+  // if (modalBodyConfirm.value == true) {
+      
+  // }
+
 
   return formValid
 }
