@@ -32,11 +32,9 @@ function launchModal() {
 modalClose1.forEach((close) => close.addEventListener('click', closeModal1))
 modalClose2.forEach((close) => close.addEventListener('click', closeModal2))
 
-
 // close modal form
 function closeModal1() {
   modalBgForm.style.display = 'none'
-
 }
 function closeModal2() {
   modalBgConfirm.style.display = 'none'
@@ -45,7 +43,6 @@ function closeModal2() {
 // #2 Implement form entries and all error message.
 //Firstname --> Lastname --> Email --> Numbers tournaments
 function validate(event) {
-  
   // preventDefaut permet d'enlever le comportement par défaut de la proprieté event submit qui est sensé aller sur la page index.html
   event.preventDefault()
   // Les compteurs sont mis à zero dès le début.
@@ -68,13 +65,15 @@ function validate(event) {
   const errorBirthdateLabel = document.querySelector('.mybirthdate.error')
   errorBirthdateLabel.style.display = 'none'
 
-  const errorQuantityTournamentLabel = document.querySelector('.myQuantityTournament.error')
+  const errorQuantityTournamentLabel = document.querySelector(
+    '.myQuantityTournament.error',
+  )
   errorQuantityTournamentLabel.style.display = 'none'
 
-    const errorAcceptCondition = document.querySelector('.myAcceptCondition.error')
-    errorAcceptCondition.style.display = 'none'
-
-
+  const errorAcceptCondition = document.querySelector(
+    '.myAcceptCondition.error',
+  )
+  errorAcceptCondition.style.display = 'none'
 
   //messages d'erreurs en mode visible
 
@@ -134,23 +133,21 @@ function validate(event) {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-debugger
-   // (5) Un bouton radio est sélectionné.
-   const checkedConditions = document.querySelector('[checkbox1]:checked')
-   if (checkedConditions.value) {
-     const errorLabel = document.querySelector('.myAcceptCondition.error')
-     errorLabel.style.display = 'inline'
-     formValid = false
-   }
+  debugger
+  // (5) Un bouton radio est sélectionné.
+  // const checkedConditions = document.querySelector('[checkbox1]:checked')
+  // if (checkedConditions.value) {
+  //   const errorLabel = document.querySelector('.myAcceptCondition.error')
+  //   errorLabel.style.display = 'inline'
+  //   formValid = false
+  // }
 
   if (formValid) {
     const modalBodyForm = document.querySelector('.bground.modal-form')
     const modalBodyConfirm = document.querySelector('.bground.modal-confirm')
     modalBodyForm.style.display = 'none'
     modalBodyConfirm.style.display = 'block'
-
   }
 
   return formValid
 }
-
