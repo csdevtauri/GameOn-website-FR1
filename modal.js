@@ -133,7 +133,7 @@ function validate(event) {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-  debugger
+  // debugger
   // (5) Un bouton radio est sélectionné.
   // const checkedConditions = document.querySelector('[checkbox1]:checked')
   // if (checkedConditions.value) {
