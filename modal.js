@@ -133,14 +133,15 @@ function validate(event) {
     errorLabel.style.display = 'inline'
     formValid = false
   }
-  // debugger
+ 
   // (5) Un bouton radio est sélectionné.
-  // const checkedConditions = document.querySelector('[checkbox1]:checked')
-  // if (checkedConditions.value) {
-  //   const errorLabel = document.querySelector('.myAcceptCondition.error')
-  //   errorLabel.style.display = 'inline'
-  //   formValid = false
-  // }
+ debugger
+  const checkedConditions = document.querySelector('[name=checkbox1]:checked')
+  if (checkedConditions.validate == true) {
+    const errorLabel = document.querySelector('.myAcceptCondition.error')
+    errorLabel.style.display = 'inline'
+    formValid = false
+  }
 
   if (formValid) {
     const modalBodyForm = document.querySelector('.bground.modal-form')

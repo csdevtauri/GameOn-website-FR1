@@ -113,8 +113,7 @@ main {
   padding-right: 2vw;
   margin: 1px 20px 15px;
   border-radius: 2rem;
-
-  text-align: justify;
+  text-align: left;
 }
 
 .modal-btn {
@@ -645,10 +644,11 @@ footer {
   }
 
   .topnav .fa {
-    margin: none;
-    /* color: #ffffff; */
+    margin: auto;
   }
 
+  
+  
   .topnav a {
     display: none;
     padding: 5px 5px;
@@ -657,7 +657,6 @@ footer {
   .topnav a.icon {
     float: right;
     display: block;
-    /* margin-top: -15px; */
   }
 
   .topnav.responsive .icon .fa {
@@ -687,8 +686,9 @@ footer {
 
   .hero-headline {
     font-size: 2rem;
-    white-space: wrap;
   }
+
+
 
   p.hero-text {
     font-weight: 400;
