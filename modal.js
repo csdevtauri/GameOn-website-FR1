@@ -8,8 +8,9 @@ function editNav() {
 }
 
 /// DOM Elements
-const modalbg = document.querySelector('.bground')
-// const modalbgSuccess = document.querySelector('modal-confirm')
+const modalBgForm = document.querySelector('.bground.modal-form')
+const modalBgConfirm = document.querySelector('.bground.modal-confirm')
+// const modalBgFormSuccess = document.querySelector('modal-confirm')
 const modalBtn = document.querySelectorAll('.modal-btn')
 const formData = document.querySelectorAll('.formData')
 //*close modal*//
@@ -19,40 +20,30 @@ const modalClose2 = document.querySelectorAll('button.btn-close')
 const modalForm = document.querySelector('.modal-inscription-form')
 modalForm.addEventListener('submit', (event) => validate(event))
 
-// const modalSuccess = document.querySelector('.modal-success')
-// modalSuccess.addEventListener('submit', (event) => validate(event))
-
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener('click', launchModal))
 
 // launch modal form
 function launchModal() {
-  modalbg.style.display = 'block'
+  modalBgForm.style.display = 'block'
 }
 // #1 TODO : close modal
 // Close modal event
-// debugger
-modalClose1.forEach((close) => close.addEventListener('click', closeModal))
-modalClose2.forEach((close) => close.addEventListener('click', closeModal))
+modalClose1.forEach((close) => close.addEventListener('click', closeModal1))
+modalClose2.forEach((close) => close.addEventListener('click', closeModal2))
 
 
 // close modal form
-// debugger
-function closeModal() {
-  modalbg.style.display = 'none'
-  debugger
-  // modalClose.style.display ='none'
+function closeModal1() {
+  modalBgForm.style.display = 'none'
 
 }
-
-// function closeModal() {
-  
-// }
-
+function closeModal2() {
+  modalBgConfirm.style.display = 'none'
+}
 
 // #2 Implement form entries and all error message.
 //Firstname --> Lastname --> Email --> Numbers tournaments
-
 function validate(event) {
   
   // preventDefaut permet d'enlever le comportement par défaut de la proprieté event submit qui est sensé aller sur la page index.html
@@ -79,6 +70,9 @@ function validate(event) {
 
   const errorQuantityTournamentLabel = document.querySelector('.myQuantityTournament.error')
   errorQuantityTournamentLabel.style.display = 'none'
+
+    const errorAcceptCondition = document.querySelector('.myAcceptCondition.error')
+    errorAcceptCondition.style.display = 'none'
 
 
 
@@ -117,18 +111,15 @@ function validate(event) {
   }
 
   // (4) Pour le nombre de concours, une valeur numérique est saisie
-
   const inputQuantityNumber = document.querySelector('#quantity')
   const nbTournois = parseInt(inputQuantityNumber.value, 10)
   if (isNaN(nbTournois) || nbTournois < 0 || nbTournois > 99) {
     const errorLabel = document.querySelector('.myQuantityTournament.error')
     errorLabel.style.display = 'inline'
-
     formValid = false
   }
 
   // (5) Un bouton radio est sélectionné.
-
   const checkedRadios = document.querySelectorAll('[name=location]:checked')
   if (checkedRadios.length < 1) {
     const errorLabel = document.querySelector('.myLocation.error')
@@ -136,40 +127,30 @@ function validate(event) {
     formValid = false
   }
   // (/) Vous devez entrer votre date de naissance.
-  // debugger
   const inputBirthdate = document.querySelector('#birthdate')
   const birthdate = inputBirthdate.value
   if (birthdate.length < 1) {
     const errorLabel = document.querySelector('.mybirthdate.error')
     errorLabel.style.display = 'inline'
-
     formValid = false
   }
+debugger
+   // (5) Un bouton radio est sélectionné.
+   const checkedConditions = document.querySelector('[checkbox1]:checked')
+   if (checkedConditions.value) {
+     const errorLabel = document.querySelector('.myAcceptCondition.error')
+     errorLabel.style.display = 'inline'
+     formValid = false
+   }
 
-  // debugger
   if (formValid) {
     const modalBodyForm = document.querySelector('.bground.modal-form')
     const modalBodyConfirm = document.querySelector('.bground.modal-confirm')
     modalBodyForm.style.display = 'none'
-    debugger
     modalBodyConfirm.style.display = 'block'
 
   }
 
-
-
-  // if (modalBodyConfirm.value == true) {
-      
-  // }
-
-
   return formValid
 }
 
-// (4) Pour le nombre de concours, une valeur numérique est saisie.
-// //regex
-// const regexNumber = /^([0-9]{1,2})$/;
-
-// if (inputQuantityNumber.value.match(regexNumber)== false) {
-//   formValid = false;
-// }
