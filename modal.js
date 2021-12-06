@@ -70,10 +70,10 @@ function validate(event) {
   )
   errorQuantityTournamentLabel.style.display = 'none'
 
-  const errorAcceptCondition = document.querySelector(
+  const errorAcceptConditionLabel = document.querySelector(
     '.myAcceptCondition.error',
   )
-  errorAcceptCondition.style.display = 'none'
+  errorAcceptConditionLabel.style.display = 'none'
 
   //messages d'erreurs en mode visible
 
@@ -125,6 +125,7 @@ function validate(event) {
     errorLabel.style.display = 'inline'
     formValid = false
   }
+
   // (/) Vous devez entrer votre date de naissance.
   const inputBirthdate = document.querySelector('#birthdate')
   const birthdate = inputBirthdate.value
@@ -133,11 +134,12 @@ function validate(event) {
     errorLabel.style.display = 'inline'
     formValid = false
   }
- 
+
   // (5) Un bouton radio est sélectionné.
- debugger
-  const checkedConditions = document.querySelector('[name=checkbox1]:checked')
-  if (checkedConditions.validate == true) {
+  // debugger
+  const condition = document.querySelectorAll('[name=checkbox1]:checked')
+  // const condition = checkedConditions.length
+  if (condition.length < 1) {
     const errorLabel = document.querySelector('.myAcceptCondition.error')
     errorLabel.style.display = 'inline'
     formValid = false

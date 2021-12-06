@@ -366,8 +366,8 @@ input[data-error]::after {
 }
 
 .btn-submit,
-.btn-signup,
-.btn-close {
+.btn-signup
+{
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -378,6 +378,32 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+
+.btn-close {
+
+  background: #fe142f;
+  display: block;
+  margin: 0 auto;
+  margin-top: 600px;
+
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
+/* span.thanks{
+
+  display: flex;
+
+
+
+
+} */
+
+
 
 /* custom select styles */
 .custom-select {
