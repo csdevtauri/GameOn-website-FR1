@@ -138,7 +138,6 @@ function validate(event) {
   // (5) Un bouton radio est sélectionné.
   // debugger
   const condition = document.querySelectorAll('[name=checkbox1]:checked')
-  // const condition = checkedConditions.length
   if (condition.length < 1) {
     const errorLabel = document.querySelector('.myAcceptCondition.error')
     errorLabel.style.display = 'inline'
