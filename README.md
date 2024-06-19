@@ -5,4 +5,5 @@ Exercice:
 3. Il n'y a aucune dépendance ;
 4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
 
-Liens--> githubpage-->  https://unknowida.github.io/GameOn-website-FR1/
+Liens--> githubpage-->  [https://unknowida.github.io/GameOn-website-FR1/](https://csdevtauri.github.io/GameOn-website-FR1/)
+
